@@ -4,10 +4,87 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Receipt for order 00475a0a-ef71-4e73-a1e9-495a95826d56</title>
   </head>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .items {
+      width: 100%;
+      border-top: 3px solid #000;
+      border-bottom: 3px solid #000;
+      margin-top: 2rem;
+    }
+
+    td:first-child.total__title {
+      text-align: right;
+    }
+
+    thead td {
+      padding: .75rem;
+    }
+
+    tbody td {
+      padding: .5rem;
+    }
+
+    tr td {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    td:first-child,
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5),
+    .total {
+      text-align: center;
+    }
+  </style>
   <body>
-    <div id="app">
+    <div id="receipt">
+      <h1>Hello Mark,</h1>
+      <p>Thank you for your purchase. Here are the order details:</p>
+
+      <table class="items" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <td></td>
+            <td>Items</td>
+            <td>Subtotal ($)</td>
+            <td>Quantity</td>
+            <td>Total ($)</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Web design course</td>
+            <td>19.99</td>
+            <td>1</td>
+            <td>19.99</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Email marketing course</td>
+            <td>19.99</td>
+            <td>1</td>
+            <td>19.99</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>SaaS metrics course</td>
+            <td>19.99</td>
+            <td>1</td>
+            <td>19.99</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="total__title"><strong>Total</strong></td>
+            <td class="total"><strong>59.97</strong></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
